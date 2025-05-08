@@ -8,9 +8,7 @@
 <body>
     <h1>Week 6 | Pay Calculator</h1>
     <script>
-        let documentbody = document.querySelector("body");
-        var outputelement = document.createElement("p");
-
+        
         var hourly = prompt('Enter your hourly pay:');
         var hoursworked = prompt('Enter your hours worked:')
         taxrate = .20
@@ -20,10 +18,12 @@
         var samsShare = (gross * taxrate).toFixed(2)
         var netpay = (gross - samsShare).toFixed(2)
 
-        var outputHTML = `Gross pay: ${gross}<br>Uncle Sam's Share: ${samsShare}<br>Net Pay: ${netpay}`;
-        console.log(outputHTML)
-        outputelement.innerHTML = outputHTML;
-        documentbody.appendChild(outputelement);
+        var outputHTML = `Gross pay: ${gross}\nUncle Sam's Share: ${samsShare}\nNet Pay: ${netpay}`;
+        alert(outputHTML)
+        console.log(`Gross pay: ${gross}`)
+        console.log(`Uncle Sam's Share: ${samsShare}`)
+        console.log(`Net Pay: ${netpay}`)
+        
 
         
     </script>
